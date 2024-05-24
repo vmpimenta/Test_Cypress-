@@ -1,0 +1,12 @@
+#Iniciar projeto Node
+npm init --yes;
+
+#Instalar o Cypress
+npm install -D cypress;
+
+#Abrir o Cypress
+npx cypress open;
+
+#Iniciar o html com LiveServer
+
+Se for preciso, alterar os caminhos do html/css/cypress;
