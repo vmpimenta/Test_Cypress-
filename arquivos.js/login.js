@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     
     // Check if user exists and password matches
     if (localStorage.getItem(username) === password) {
-        window.location.href = "C:/Users/victo/Documents/A3/teste/arquivoshtml/main.html";
+        window.location.href = "http://127.0.0.1:5500/arquivoshtml/main.html";
         alert("Login Concluido!");
        
         // You can redirect to another page after successful login if needed

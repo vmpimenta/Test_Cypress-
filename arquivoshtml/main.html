@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="\arquivos.css\main.css" rel="stylesheet">
     <title>Sedentarismo Zero</title>
 </head>
 <body>
-    <h1>BEM VINDO</h1>
-
-    <button onclick="limparLocalStorage()">Limpar Registros</button>
+    <div>
+        <h1>BEM VINDO</h1>
+    </div>
+    
+    
+        <button class="botão" onclick="limparLocalStorage()">Limpar Registros</button>
 
     <script>
         function limparLocalStorage() {
@@ -16,5 +20,7 @@
             console.log('localStorage foi limpo.');
         }
     </script>
+    
+    
 </body>
 </html>
