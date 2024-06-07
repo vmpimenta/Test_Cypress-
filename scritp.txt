@@ -1,3 +1,10 @@
+#Precisa ter o node na maquina 
+instale o node;
+
+#No vscode
+procure pela extensão LiveServer e instale;
+por precaução também instale a extensão HTML CSS Support;
+
 #Iniciar projeto Node
 npm init --yes;
 
@@ -10,3 +17,6 @@ npx cypress open;
 #Iniciar o html com LiveServer
 
 Se for preciso, alterar os caminhos do html/css/cypress;
+
+#DICA
+se quiser continuar com os testes no Cypress a extensão ES6 Mocha Snippets pode te ajudar;

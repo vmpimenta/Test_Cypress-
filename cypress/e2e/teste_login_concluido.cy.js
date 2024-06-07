@@ -6,6 +6,12 @@ context('testando login bem sucedido', () => {
       cy.visit("http://127.0.0.1:5500/arquivoshtml/login.html");
       cy.get('input[type="text"]').type('eu21');
       cy.get('input[type="password"]').type('Eu@21');
+
+      cy.on('window:alert', (alertText) => {
+        // Verifica se o texto do alerta é o esperado
+        expect(alertText).to.equal('Login Concluido!')
+    });
+
       cy.contains("Entrar").click();
     });
   });

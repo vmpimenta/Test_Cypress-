@@ -9,6 +9,12 @@ describe('verificar se o usuário já existe', () => {
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[placeholder="Senha"]').type('Eu@21')
         cy.get('input[type="date"]').type("1997-11-07")
+        
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Usuário já existe!')
+        });
+
         cy.contains("Cadastrar").click()
     });
 });

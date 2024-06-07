@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
        
         // You can redirect to another page after successful login if needed
     } else {
-        alert("Usuário ou senha invalidos!");
+        alert("Usuário ou Senha invalidos!");
     }
     localStorage.setItem("eu21", "Eu@21");
 });

@@ -6,6 +6,12 @@ describe('informar ao usuário que todos os campos devem ser preenchidos', () =>
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[placeholder="Senha"]').type('Gabriel@123')
         cy.get('input[type="date"]').type("1997-11-07")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, preencha todos os campos')
+        });
+
         cy.contains("Cadastrar").click()
     });
 
@@ -15,6 +21,12 @@ describe('informar ao usuário que todos os campos devem ser preenchidos', () =>
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[placeholder="Senha"]').type('Gabriel@123')
         cy.get('input[type="date"]').type("1997-11-07")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, preencha todos os campos')
+        });
+
         cy.contains("Cadastrar").click()
     });
 
@@ -24,6 +36,12 @@ describe('informar ao usuário que todos os campos devem ser preenchidos', () =>
         cy.get('input[id="nomeUsuario"]').type('eu21')
         cy.get('input[placeholder="Senha"]').type('Gabriel@123')
         cy.get('input[type="date"]').type("1997-11-07")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, preencha todos os campos')
+        });
+
         cy.contains("Cadastrar").click()
     });
 
@@ -33,6 +51,12 @@ describe('informar ao usuário que todos os campos devem ser preenchidos', () =>
         cy.get('input[id="nomeUsuario"]').type('eu21')
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[type="date"]').type("1997-11-07")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, preencha todos os campos')
+        });
+
         cy.contains("Cadastrar").click()
     });
 
@@ -42,6 +66,12 @@ describe('informar ao usuário que todos os campos devem ser preenchidos', () =>
         cy.get('input[id="nomeUsuario"]').type('eu21')
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[placeholder="Senha"]').type('Gabriel@123')
+        
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, preencha todos os campos')
+        });
+
         cy.contains("Cadastrar").click()
     });
 });

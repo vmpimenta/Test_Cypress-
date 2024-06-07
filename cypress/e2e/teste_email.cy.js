@@ -9,6 +9,12 @@ describe('testando o campo email', () => {
         cy.get('input[placeholder="Email"]').type('teste@teste')
         cy.get('input[placeholder="Senha"]').type('Abc123#')
         cy.get('input[type="date"]').type("1997-11-07")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('Por favor, insira um e-mail válido')
+        });
+
         cy.contains("Cadastrar").click()
     });
 });

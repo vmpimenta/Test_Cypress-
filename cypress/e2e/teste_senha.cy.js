@@ -6,6 +6,12 @@ describe('testando requisitos minimos de senha', () => {
         cy.get('input[placeholder="Email"]').type('igornobre2016@hotmail.com')
         cy.get('input[placeholder="Senha"]').type('abc123')
         cy.get('input[type="date"]').type("1998-07-14")
+
+        cy.on('window:alert', (alertText) => {
+            // Verifica se o texto do alerta é o esperado
+            expect(alertText).to.equal('A senha deve conter pelo menos um número, uma letra, um caractere especial e uma letra maiúscula.')
+        });
+
         cy.contains("Cadastrar").click()
     });
 });
